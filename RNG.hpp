@@ -29,14 +29,14 @@ namespace Storm {  // Version 3.2.2 Custom
     }
 
     auto bernoulli_variate(double truth_factor) -> bool {
-        std::bernoulli_distribution distribution { std::clamp(truth_factor, 0.0, 1.0) };
+        std::bernoulli_distribution distribution { truth_factor };
         return distribution(Engine::Hurricane);
     }
 
     auto binomial_variate(Storm::Integer number_of_trials, double probability) -> Storm::Integer {
         std::binomial_distribution<Storm::Integer> distribution {
             std::max(number_of_trials, Storm::Integer(1)),
-            std::clamp(probability, 0.0, 1.0)
+            probability
         };
         return distribution(Engine::Hurricane);
     }
@@ -44,13 +44,13 @@ namespace Storm {  // Version 3.2.2 Custom
     auto negative_binomial_variate(Storm::Integer number_of_trials, double probability) -> Storm::Integer {
         std::negative_binomial_distribution<Storm::Integer> distribution {
             std::max(number_of_trials, Storm::Integer(1)),
-            std::clamp(probability, 0.0, 1.0)
+            probability
         };
         return distribution(Engine::Hurricane);
     }
 
     auto geometric_variate(double probability) -> Storm::Integer {
-        std::geometric_distribution<Storm::Integer> distribution { std::clamp(probability, 0.0, 1.0) };
+        std::geometric_distribution<Storm::Integer> distribution { probability };
         return distribution(Engine::Hurricane);
     }
 

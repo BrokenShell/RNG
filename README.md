@@ -97,6 +97,9 @@
 
 
 ## Development Log
+##### RNG 1.6.7
+- Installer Update to address installation on Linux.
+
 ##### RNG 1.6.6
 - Documentation Update
 
