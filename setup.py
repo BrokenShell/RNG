@@ -23,7 +23,7 @@ setup(
     author="Robert Sharp",
     author_email="webmaster@sharpdesigndigital.com",
     requires=["Cython"],
-    version="1.7.0",
+    version="1.7.1",
     description="Python3 API for the C++ Random Library",
     long_description=long_description,
     long_description_content_type="text/markdown",

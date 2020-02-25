@@ -97,6 +97,9 @@
 
 
 ## Development Log
+##### RNG 1.7.1
+- Fixes Major Bug in 1.7.0
+
 ##### RNG 1.7.0
 - Storm 3.3.3 update
 
