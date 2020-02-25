@@ -97,6 +97,9 @@
 
 
 ## Development Log
+##### RNG 1.7.0
+- Storm 3.3.3 update
+
 ##### RNG 1.6.7
 - Installer Update to address installation on Linux.
 

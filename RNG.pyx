@@ -10,7 +10,7 @@ __all__ = (
 )
 
 
-cdef extern from "RNG.hpp":
+cdef extern from "Storm.hpp":
     int         rng_bernoulli       "Storm::bernoulli_variate"(double)
     long long   rng_uniform_int     "Storm::uniform_int_variate"(long long, long long)
     long long   rng_binomial        "Storm::binomial_variate"(long long, double)
