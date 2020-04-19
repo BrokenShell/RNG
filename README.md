@@ -94,9 +94,20 @@
 - `RNG.student_t_variate(degrees_of_freedom: float) -> float`
     - T distribution. Same as a normal distribution except it uses the sample standard deviation rather than the population standard deviation.
     - As degrees_of_freedom goes to infinity it converges with the normal distribution.
+- `RNG.beta_variate(alpha, beta) -> float`
+- `RNG.pareto_variate(alpha) -> float`
+- `RNG.vonmises_variate(mu: float, kappa: float) -> float`
+- `RNG.triangular_variate(low: float, high: float, mode: float = None)`
 
 
 ## Development Log
+##### RNG 1.7.2
+- Adds four new functions:
+    - beta_variate
+    - pareto_variate
+    - vonmises_variate
+    - triangular_variate
+
 ##### RNG 1.7.1
 - Fixes Major Bug in 1.7.0
 

@@ -3,10 +3,13 @@
 
 
 __all__ = (
-    "bernoulli_variate", "uniform_int_variate", "generate_canonical", "uniform_real_variate",
-    "binomial_variate", "negative_binomial_variate", "geometric_variate", "poisson_variate",
-    "normal_variate", "lognormal_variate", "exponential_variate", "gamma_variate", "weibull_variate",
-    "extreme_value_variate", "chi_squared_variate", "cauchy_variate", "fisher_f_variate", "student_t_variate",
+    "bernoulli_variate", "uniform_int_variate", "generate_canonical",
+    "uniform_real_variate", "binomial_variate", "negative_binomial_variate",
+    "geometric_variate", "poisson_variate", "normal_variate",
+    "lognormal_variate", "exponential_variate", "gamma_variate",
+    "weibull_variate", "extreme_value_variate", "chi_squared_variate",
+    "cauchy_variate", "fisher_f_variate", "student_t_variate",
+    "beta_variate", "pareto_variate", "vonmises_variate", "triangular_variate",
 )
 
 
@@ -29,7 +32,23 @@ cdef extern from "Storm.hpp":
     double      rng_cauchy          "Storm::cauchy_variate"(double, double)
     double      rng_fisher_f        "Storm::fisher_f_variate"(double, double)
     double      rng_student_t       "Storm::student_t_variate"(double)
+    double      rng_beta            "Storm::beta_variate"(double, double)
+    double      rng_pareto          "Storm::pareto_variate"(double)
+    double      rng_vonmises        "Storm::vonmises_variate"(double, double)
+    double      rng_triangular      "Storm::triangular_variate"(double, double, double)
 
+
+def beta_variate(alpha: float, beta:float) -> float:
+    return rng_beta(alpha, beta)
+
+def pareto_variate(alpha: float) -> float:
+    return rng_pareto(alpha)
+
+def vonmises_variate(mu: float, kappa: float) -> float:
+    return rng_vonmises(mu, kappa)
+
+def triangular_variate(low: float, high: float, mode: float) -> float:
+    return rng_triangular(low, high, mode)
 
 def bernoulli_variate(ratio_of_truth: float) -> bool:
     return rng_bernoulli(ratio_of_truth) == 1
