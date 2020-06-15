@@ -13,7 +13,7 @@ setup(
             name="RNG",
             sources=["RNG.pyx"],
             language=["c++"],
-            extra_compile_args=["-std=gnu++17"],
+            extra_compile_args=["-std=c++17"],
         ),
         compiler_directives={
             'embedsignature': True,
@@ -23,7 +23,7 @@ setup(
     author="Robert Sharp",
     author_email="webmaster@sharpdesigndigital.com",
     requires=["Cython"],
-    version="1.7.3",
+    version="1.8.0",
     description="Python3 API for the C++ Random Library",
     long_description=long_description,
     long_description_content_type="text/markdown",

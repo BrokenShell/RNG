@@ -101,6 +101,15 @@
 
 
 ## Development Log
+##### RNG 1.8.0
+- Installer update
+- Storm 3.3.4 update
+- Adds four new functions:
+    - beta_variate
+    - pareto_variate
+    - vonmises_variate
+    - triangular_variate
+
 ##### RNG 1.7.3
 - Documentation Update
 
