@@ -1,10 +1,8 @@
 from setuptools import setup, Extension
 from Cython.Build import cythonize
 
-
 with open("README.md", "r") as file:
     long_description = file.read()
-
 
 setup(
     name="RNG",
@@ -39,10 +37,12 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
     keywords=[
-        "rng", "Mersenne Twister", "random number generator", "cpp random library", "random integer", "Bernoulli",
+        "rng", "Mersenne Twister", "random number generator",
+        "cpp random library", "random integer", "Bernoulli",
         "binomial", "negative binomial", "geometric", "poisson", "discrete",
-        "normal", "distribution", "log normal", "gamma", "exponential", "weibull", "extreme value",
-        "chi squared", "cauchy", "fisher f", "student t",
+        "normal", "distribution", "log normal", "gamma", "exponential",
+        "weibull", "extreme value", "chi squared", "cauchy", "fisher f",
+        "student t",
     ],
     python_requires='>=3.6',
 )
